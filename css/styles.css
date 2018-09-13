@@ -1,0 +1,212 @@
+body {
+    font-family: 'PT Sans', sans-serif; /* Google Font */
+    font-size: 1rem; /* default size, anyway */
+    padding: 0;
+    margin: 0;
+}
+
+#index_container { /* CSS Grid Layout */
+    display: grid;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+    background-color: #FFF;
+/*    min-height: 95vh;*/
+    padding: 0;
+}
+
+#about p {
+    line-height: 44px;
+}
+
+#about p::first-letter {
+    font-size: 4rem;
+    font-family: 'Cinzel', serif;
+    padding-right: 3px;
+}
+
+#container { /* CSS Grid Layout */
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+      "header"
+      "main"
+      "aside"
+      "footer";
+    background-image: url(../images/buildings.jpg);
+    background-repeat: no-repeat;
+/*    background-size: cover;*/
+    padding: 0;
+}
+
+#index_container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    background-image: url(../images/buildings.jpg);
+    background-repeat: no-repeat;
+/*    background-size: cover;*/
+    padding: 0;
+}
+
+header {
+    grid-area: header;
+}
+
+header nav li {
+    /* make mobile drop down menu items more prominent */
+    background-color: #888;
+    color: #FFF;
+    padding: 15px;
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+main {
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 70vh;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 70vh;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+footer {
+  background-color: #888;
+  grid-area: footer;  
+}
+
+
+nav {
+    background-color: #e4d9c7;
+}
+
+nav li {
+    list-style: none; 
+    margin: 0;
+    font-size: 0.75rem; /* approx 12px */
+    font-weight: bold; 
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3b87c1;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav ul, nav form { /* get search box inline w links */
+    display: inline-block; 
+}
+
+nav form { /* move search box away from links */
+    margin-left: 40px;
+}
+
+.btn { /* most if not all btns get this class */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-burger { /* only the burger btn gets this */
+    float: right;
+    margin: 1rem;
+    display: inline;
+}
+
+input {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+/* the nav ul appears-disappear w media query */
+/* in mobile-first mode, hide nav-ul */
+header nav ul {
+    display: none;
+}
+
+/* search form in mobile-first (1-col) mode */
+nav form { 
+    margin: 1rem;
+}
+
+footer {
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+/* ##**## 2-COLUMN LAYOUT MEDIA QUERY ##**## */
+/* if viewport is 650+ pixels, switch to this: */
+@media (min-width: 750px) {
+    
+    #container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer"
+    }
+    
+    #index_container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer"
+    }
+    
+    .btn-burger {
+        display: none;
+    }
+    
+    header nav li {
+        display: inline-block;
+        /* turn off all the prominent mobile view li properties */
+        background-color: transparent;
+        padding: 5px 15px;
+        font-size: 1rem;
+        text-align: left;
+        text-transform: none;
+        letter-spacing: 0px;
+        cursor: pointer;
+    }
+    
+    header nav li:hover {
+        background-color: transparent;
+    }
+    
+    nav ul {
+        /* prevent JS from overriding this property */
+        display: inline-block !important;
+    }
+    
+} /* close 2-column view media query */
+
+
+
+
+
+

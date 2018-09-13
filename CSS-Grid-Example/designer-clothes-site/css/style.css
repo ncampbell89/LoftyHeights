@@ -1,0 +1,199 @@
+/*****************************
+GLOBAL STYLES AND MOBILE FIRST
+*****************************/
+html {
+    background-color: #f7d9d9;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #534c4c;
+}
+
+img {
+    width: 100%;    
+}
+
+/* remove underline from all links */
+a {
+    text-decoration: none;
+    color: #534c4c;
+}
+
+#logo {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 20px 0 0 0;
+}
+
+.highlighted {
+    color: #c158ad;
+    font-size: 0.8em;
+}
+
+header ul {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+}
+
+header li  {
+    display: block;
+    padding: 10px;
+    background-color: #eee;
+}
+
+/* add margin to left of icons */
+.fa {
+    margin-left: 5px;
+}
+
+/* MAIN MENU */
+
+/* change collapsed menu to grey background and text center */
+.menu-collapser {
+    background-color: #aaa;
+    text-align: center;
+}
+
+/* main links, for him, for her etc */
+nav a {
+    background-color: #50657b;
+    color: #fff;
+}
+
+/* sub links clothing, shoes etc */
+.slimmenu ul > li a {
+    background-color: #fcfcfc;
+}
+
+/* background color behind drop down links. > selects direct children */
+ul.slimmenu li > ul {
+    background-color: #fff;
+}
+
+.sale-text {
+    color: #dd5454;
+}
+
+/* MENU END*/
+
+/* center search form */
+form {
+    text-align: center;
+}
+
+/*  search box & email signup */
+input[type=search], input[type=button], input[type=email]  {
+    height: 2em;    
+}
+
+input[type=search] {
+    width: 77%;
+}
+
+input[type=email] {
+    width: 40%;
+}
+
+.sub-nav p {
+    text-align: center;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #aaa;
+}
+
+/* feature text positioning */
+.feature  {
+    position: relative;
+}
+
+.gallery p {
+    position: absolute;
+    bottom: 5px;
+    color: #c158ad;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 2% 0;
+    background-color: #ddd;
+    /* IE9, Firefox, Chrome, Opera, and Safari use the property opacity for transparency. The opacity property can take a value from 0.0 - 1.0. A lower value makes the element more transparent.
+
+    IE8 and earlier use filter:alpha(opacity=x). The x can take a value from 0 - 100. A lower value makes the element more transparent. */
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+.about-us {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+footer ul {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+footer li  {
+    display: block;
+    padding: 10px;
+    background-color: #eee;
+    border-top: 1px dotted #aaa;
+}
+
+footer li:last-child {
+    border-bottom: 1px dotted #aaa;
+}
+
+/* minor breakpoint for top menu to make inline */
+@media screen and (min-width : 600px) {
+header li  {
+    display: inline;
+    }
+}
+
+@media screen and (min-width : 800px) {
+
+    body {
+        width: 90%;
+        padding: 10px; 
+    }
+    
+    #logo {
+        text-align: left;
+        margin: 0;
+        font-size: 2em;
+    }
+    
+    header ul {
+        text-align: right;
+    }
+    
+    header li  {
+        background-color: transparent;
+    }
+    
+    input[type=email] {
+        width:60%;
+        margin-top: 5%;  
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    body {
+        max-width: 1500px; 
+        font-size: 1.1em;
+    }
+    
+    #logo {
+        font-size: 2.2em;
+    }
+   
+}

@@ -1,0 +1,16 @@
+Add-a-Hood CMS It’s a beautiful day in the neighborhood! 
+Continue working on the CMS, adding a third tab: HOOD. 
+Follow the include-AJAX-PHP no-form style, as found in Add-a-Bldg and Add-an-Apt:
+
+Make new fields to the neighborhoods table: borough and subway (ex: E, F)
+Enhance the tabbed panel UI by adding a hood div and HOOD tab div. 
+Clicking the HOOD tab calls the Javascript function that sets the z-index
+Put the hood input elements and AJAX function in an include file
+The Hood CMS has four inputs: hoodName., borough, subway and hoodDesc
+Clicking the SAVE HOOD button calls the ajaxSaveHood function
+AJAX sends GET vars as querystring to PHP processor
+PHP inserts the new hood into the neighborhoods table of MySQL database
+PHP echoes the new hood ID back to AJAX 
+EXTRA CREDIT: 
+
+Use the new hood ID, echoed back by PHP back to AJAX, to set the new hood the default choice in the the Bldg CMS. So if you add a hood and then click BLDG, the new hood is already the choice in the Neighborhoods menu.

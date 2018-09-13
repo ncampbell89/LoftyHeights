@@ -1,0 +1,73 @@
+#apt, #bldg, #hood {
+    position: absolute;
+	top: 9rem;
+	left: 3.25rem;
+    width: 650px;
+    height: 500px;
+    padding: 25px;
+    border: 1px solid #000;
+    margin: 5px 25px;
+	text-transform: uppercase;
+	letter-spacing: 2px;    
+	font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+	color: #555;
+    background-color: #e4d9c7;
+}
+
+#apt {
+   z-index: 2;
+}
+
+#bldg {
+    z-index: 1;
+}
+
+#hood {
+   z-index: 0;
+}
+
+#apt-tab, #bldg-tab, #hood-tab {
+    position: absolute;
+    top: 7rem;
+    width: 140px;
+    height: 20px;
+    padding: 10px 0;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+	color: #555;
+    background-color: #e4d9c7;
+}
+
+#apt-tab {
+	left: 6rem;
+}
+
+#bldg-tab {
+    left: 17rem;
+}
+
+#hood-tab {
+    left: 28rem;
+}
+
+#bldg-tab:hover, #apt-tab:hover, #hood-tab:hover {
+    background-color:rgba(239, 230, 216, 0.62);
+}
+
+form p {
+    margin: 20px;
+    text-align: left;
+}
+
+
+main select, main input, main button {
+    font-size: 1rem;
+    padding: 5px;
+}
